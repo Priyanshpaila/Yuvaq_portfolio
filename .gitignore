@@ -53,3 +53,5 @@ desktop.ini
 
 # Docker (optional local overrides)
 docker-compose.override.yml
+Dockerfile
+nginx.conf
