@@ -14,6 +14,11 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
+    return () => (document.body.style.overflow = "auto");
+  }, [isOpen]);
+
   const navItems = [
     { name: "Features", href: "#features" },
     { name: "Solutions", href: "#modules" },
@@ -92,16 +97,16 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-[55] bg-gradient-to-b from-slate-950/95 via-slate-900/95 to-black/90 backdrop-blur-xl border-t border-cyan-500/20 md:hidden"
+            className="fixed inset-0 z-[55] bg-gradient-to-b from-slate-950/95 via-slate-900/95 to-black/90 backdrop-blur-xl border-t border-cyan-500/20 md:hidden overflow-y-auto"
           >
-            <div className="max-w-7xl mx-auto px-6 py-8 space-y-4">
+            <div className="max-w-7xl mx-auto px-6 py-8 space-y-4 min-h-screen flex flex-col">
               {navItems.map((item, i) => (
                 <motion.a
                   key={i}
                   href={item.href}
                   onClick={(e) => handleScrollTo(e, item.href)}
                   whileHover={{ x: 5 }}
-                  className="block text-gray-200 hover:text-cyan-300 text-lg font-medium py-2"
+                  className="block mt-7 text-gray-200 hover:text-cyan-300 text-lg font-medium py-3 border-b border-white/5"
                 >
                   {item.name}
                 </motion.a>
