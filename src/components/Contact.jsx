@@ -136,11 +136,11 @@ export default function Contact() {
                 color: "text-cyan-400",
                 label: "connect@yuvaq.com",
               },
-              {
-                icon: Phone,
-                color: "text-blue-400",
-                label: "+91 98765 43210",
-              },
+              // {
+              //   icon: Phone,
+              //   color: "text-blue-400",
+              //   label: "+91 98765 43210",
+              // },
               {
                 icon: MapPin,
                 color: "text-purple-400",
