@@ -14,11 +14,11 @@ export default function About() {
     },
     {
       q: "Who are your solutions for?",
-      a: "We work with startups, SMBs, and large enterprises across industries — from manufacturing and logistics to healthcare, education, and fintech.",
+      a: "We work with startups, MSME, and large enterprises across industries — from manufacturing and logistics.",
     },
     {
       q: "How do you ensure data security?",
-      a: "Our architecture follows strict enterprise security protocols: encrypted data storage, role-based access control, and continuous monitoring for vulnerabilities.",
+      a: "Our architecture follows strict enterprise security protocols: data storage, role-based access control, and continuous monitoring for vulnerabilities.",
     },
     {
       q: "Do you offer custom integrations?",
@@ -118,7 +118,7 @@ export default function About() {
               },
               {
                 title: "Reliability Built In",
-                description: "Enterprise-grade infrastructure with 99.9% uptime ensures your business never stops.",
+                description: "Enterprise-grade infrastructure with 90.4% uptime ensures your business never stops.",
                 icon: "🔒",
               },
               {

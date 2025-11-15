@@ -156,126 +156,117 @@ export default function Features() {
             ))}
           </motion.div>
 
-          {/* Right Column: Interactive Dashboard Illustration */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative"
-          >
-            {/* Glow background */}
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-[2rem] blur-2xl"></div>
+{/* Right Column: Interactive Dashboard Illustration */}
+<motion.div
+  initial={{ opacity: 0, x: 40 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.8 }}
+  className="relative"
+>
+  {/* Glow background */}
+  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-[2rem] blur-2xl"></div>
 
-            {/* Dashboard Container */}
-            <div className="relative bg-gradient-to-br from-slate-900/80 via-slate-900/70 to-slate-800/80 border border-cyan-500/30 rounded-[2rem] shadow-[0_0_50px_-10px_rgba(6,182,212,0.25)] backdrop-blur-xl p-6 sm:p-8 max-w-[600px] mx-auto">
-              {/* Top Bar */}
-              <div className="flex justify-between items-center mb-6">
-                <div className="flex gap-2">
-                  <div className="w-3 h-3 rounded-full bg-green-400"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                  <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                </div>
-                <span className="text-gray-400 text-sm font-medium">
-                  YuvaQ Performance Suite
-                </span>
-              </div>
+  {/* Dashboard Container */}
+  <div className="relative bg-gradient-to-br from-slate-900/80 via-slate-900/70 to-slate-800/80 border border-cyan-500/30 rounded-[2rem] shadow-[0_0_50px_-10px_rgba(6,182,212,0.25)] backdrop-blur-xl p-6 sm:p-8 max-w-[600px] mx-auto">
+    {/* Top Bar */}
+    <div className="flex justify-between items-center mb-6">
+      <div className="flex gap-2">
+        <div className="w-3 h-3 rounded-full bg-green-400"></div>
+        <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
+        <div className="w-3 h-3 rounded-full bg-red-400"></div>
+      </div>
+      <span className="text-gray-400 text-sm font-medium">
+        YuvaQ Performance Suite
+      </span>
+    </div>
 
-              {/* Graph Section */}
-              <div className="relative bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-xl overflow-hidden h-40 sm:h-48 flex items-center justify-center mb-6">
-                <motion.svg
-                  viewBox="0 0 300 100"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="absolute inset-0 w-full h-full"
-                >
-                  <motion.path
-                    d="M0,60 Q40,20 80,40 T160,30 T240,55 T300,40"
-                    stroke="url(#gradLine)"
-                    strokeWidth="3"
-                    fill="transparent"
-                    initial={{ pathLength: 0 }}
-                    animate={{ pathLength: 1 }}
-                    transition={{ duration: 2, ease: "easeInOut" }}
-                  />
-                  <defs>
-                    <linearGradient id="gradLine" x1="0" y1="0" x2="1" y2="1">
-                      <stop offset="0%" stopColor="#06b6d4" />
-                      <stop offset="100%" stopColor="#3b82f6" />
-                    </linearGradient>
-                  </defs>
-                </motion.svg>
-              </div>
+    {/* Graph Section */}
+    <div className="relative bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-xl overflow-hidden h-40 sm:h-48 flex items-center justify-center mb-6">
+      <motion.svg
+        viewBox="0 0 300 100"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="absolute inset-0 w-full h-full"
+      >
+        <motion.path
+          d="M0,60 Q40,20 80,40 T160,30 T240,55 T300,40"
+          stroke="url(#gradLine)"
+          strokeWidth="3"
+          fill="transparent"
+          initial={{ pathLength: 0 }}
+          animate={{ pathLength: 1 }}
+          transition={{ duration: 2, ease: "easeInOut" }}
+        />
+        <defs>
+          <linearGradient id="gradLine" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="#06b6d4" />
+            <stop offset="100%" stopColor="#3b82f6" />
+          </linearGradient>
+        </defs>
+      </motion.svg>
+    </div>
 
-              {/* KPI Summary Row */}
-              <div className="grid grid-cols-3 gap-3 sm:gap-4 mb-6">
-                {[
-                  { label: "Uptime", value: "99.98%", color: "text-green-400" },
-                  {
-                    label: "Process Speed",
-                    value: "+43%",
-                    color: "text-cyan-400",
-                  },
-                  {
-                    label: "System Load",
-                    value: "63%",
-                    color: "text-yellow-400",
-                  },
-                ].map((metric, i) => (
-                  <div
-                    key={i}
-                    className="rounded-xl bg-slate-800/60 border border-slate-700/60 py-3 sm:py-4 flex flex-col items-center hover:bg-slate-800/80 transition"
-                  >
-                    <h4
-                      className={`text-lg sm:text-xl font-bold ${metric.color}`}
-                    >
-                      {metric.value}
-                    </h4>
-                    <p className="text-gray-400 text-xs sm:text-sm mt-1">
-                      {metric.label}
-                    </p>
-                  </div>
-                ))}
-              </div>
+    {/* KPI Summary Row */}
+    <div className="grid grid-cols-3 gap-3 sm:gap-4 mb-6">
+      {[
+        { label: "Uptime", value: "90.4%", color: "text-green-400" },
+        { label: "Process Speed", value: "+18%", color: "text-cyan-400" },
+        { label: "System Load", value: "71%", color: "text-yellow-400" },
+      ].map((metric, i) => (
+        <div
+          key={i}
+          className="rounded-xl bg-slate-800/60 border border-slate-700/60 py-3 sm:py-4 flex flex-col items-center hover:bg-slate-800/80 transition"
+        >
+          <h4 className={`text-lg sm:text-xl font-bold ${metric.color}`}>
+            {metric.value}
+          </h4>
+          <p className="text-gray-400 text-xs sm:text-sm mt-1">
+            {metric.label}
+          </p>
+        </div>
+      ))}
+    </div>
 
-              {/* Progress Bars */}
-              <div className="space-y-4">
-                {[
-                  {
-                    label: "Automation Efficiency",
-                    value: "92%",
-                    gradient: "from-cyan-400 to-blue-500",
-                  },
-                  {
-                    label: "Resource Utilization",
-                    value: "74%",
-                    gradient: "from-purple-400 to-pink-500",
-                  },
-                  {
-                    label: "Security Compliance",
-                    value: "99%",
-                    gradient: "from-green-400 to-emerald-500",
-                  },
-                ].map((bar, i) => (
-                  <div key={i}>
-                    <div className="flex justify-between text-xs text-gray-400 mb-1">
-                      <span>{bar.label}</span>
-                      <span>{bar.value}</span>
-                    </div>
-                    <div className="h-2 bg-slate-800 rounded-full overflow-hidden">
-                      <motion.div
-                        className={`h-full bg-gradient-to-r ${bar.gradient}`}
-                        initial={{ width: "0%" }}
-                        whileInView={{ width: bar.value }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1.2, delay: i * 0.2 }}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </motion.div>
+    {/* Progress Bars */}
+    <div className="space-y-4">
+      {[
+        {
+          label: "Automation Efficiency",
+          value: "78%",
+          gradient: "from-cyan-400 to-blue-500",
+        },
+        {
+          label: "Resource Utilization",
+          value: "64%",
+          gradient: "from-purple-400 to-pink-500",
+        },
+        {
+          label: "Security Compliance",
+          value: "89%",
+          gradient: "from-green-400 to-emerald-500",
+        },
+      ].map((bar, i) => (
+        <div key={i}>
+          <div className="flex justify-between text-xs text-gray-400 mb-1">
+            <span>{bar.label}</span>
+            <span>{bar.value}</span>
+          </div>
+          <div className="h-2 bg-slate-800 rounded-full overflow-hidden">
+            <motion.div
+              className={`h-full bg-gradient-to-r ${bar.gradient}`}
+              initial={{ width: "0%" }}
+              whileInView={{ width: bar.value }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.2, delay: i * 0.2 }}
+            />
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</motion.div>
+
         </div>
       </div>
     </section>
