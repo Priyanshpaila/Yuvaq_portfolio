@@ -58,7 +58,7 @@ export default function Navbar() {
               <img
                 src="/logo.png"
                 alt="YuvaQ Logo"
-                className="w-20 h-20 object-contain drop-shadow-[0_0_10px_rgba(34,211,238,0.4)]"
+                className="w-30 h-10 object-contain drop-shadow-[0_0_10px_rgba(34,211,238,0.4)]"
               />
             </motion.a>
 

@@ -23,7 +23,7 @@ export default function Footer() {
               <img
                 src="/logo.png"
                 alt="YuvaQ Logo"
-                className="w-20 h-10 object-contain drop-shadow-[0_0_10px_rgba(34,211,238,0.4)]"
+                className="w-40 h-10 object-contain drop-shadow-[0_0_10px_rgba(34,211,238,0.4)]"
               />
               
             </div>
